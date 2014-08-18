@@ -6,10 +6,14 @@ namespace Game
 	{
 		static void Main(string[] args)
 		{
-			var player = new Player();
-			var moves = player.Move();
+			var playerOne = new Player();
+			playerOne.TakeTurn();
 
-			Console.WriteLine(String.Format("Player moved {0} spaces.", moves));
+			var playerTwo = new Player();
+			playerTwo.TakeTurn();
+
+			Console.WriteLine(String.Format("Player One position {0}.", playerOne.Position));
+			Console.WriteLine(String.Format("Player Two position {0}.", playerTwo.Position));
 		}
 	}
 }
